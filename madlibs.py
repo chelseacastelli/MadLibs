@@ -7,13 +7,11 @@ nouns = list()
 verbs = list()
 verb_ing = list()
 integers = list()
-# Article of clothing
 article_of_clothing = ""
 story = ""
 
-#
+
 # FUNCTIONS TO DRAW RANDOM WORDS FROM EACH LIST
-#
 def random_adj():
     item = random.choice(adjectives)
     adjectives.remove(item)
@@ -49,14 +47,15 @@ def user_input(prompt):
     user_input = input(prompt)
     return user_input
 
+# FUNCTION USED IN TEST
 def list_all_items(list):
     print('\n')
-    # Output for empty list
     index = 0
     for item in list:
         print("{} {}".format(index, item))
         index += 1
 
+# FUNCTION TO MAKE USER INPUTTED WORDS READABLE
 def color_text(word):
     return Fore.MAGENTA + word + Style.RESET_ALL
 
@@ -86,6 +85,7 @@ def store_words():
 
     return "Mondays are always " + random_adj() + ". I " + random_verb() + " my alarm " + random_int() + " times until I am officially late. I " + random_verb() + " out of bed, " + random_verb() + " on clothes, " + random_verb() + " my teeth, and was out of the dorm building in " + random_int() + " minutes. " + random_verb_ing() + " down the hills of San Francisco, I found myself completely out of breath. I run inside Make School and take off my " + color_text(article_of_clothing) + ", exposing mismatched socks. I curse the Gods for a second and focus my attention on getting to my huddle before it ends. I " + random_verb() + " up the steps, not forgetting to trip a couple times, and dart for the Great Hall. Before getting there, though, I realize the " + random_noun() + " is pretty empty. & now that I think about it, I didn’t see any other shoes down in the " + random_noun() + ". I get into the Great Hall and no one is there. I " + random_verb() + " at my calendar and face-palm myself. It’s Labor Day."
 
+# PRINT STORY WITH TEXTWRAP FORMATTING
 def print_story():
     print('\n')
     print(textwrap.fill(story, 53))
