@@ -6,7 +6,7 @@ verbs = list()
 verb_ing = list()
 integers = list()
 # Article of clothing
-other = list()
+article_of_clothing = ""
 
 #
 # FUNCTIONS TO DRAW RANDOM WORDS FROM EACH LIST
@@ -52,7 +52,7 @@ def test():
     list_all_items(nouns)
     list_all_items(verbs)
     list_all_items(integers)
-    list_all_items(other)
+    print(article_of_clothing)
 
     list_all_items(adjectives)
     list_all_items(verbs)
@@ -68,7 +68,7 @@ def test():
     list_all_items(verbs)
 
 def print_story():
-    print("Mondays are always {}. I {} my alarm {} times until I am officially late. I {} out of bed, {} on clothes, {} my teeth, and was out of the dorm building in {} minutes. {} down the hills of San Francisco, I found myself completely out of breath. I run inside Make School and take off my {}, exposing mismatched socks. I curse the Gods for a second and focus my attention back to getting to my Huddle before it ends. I {} up the steps, not forgetting to trip a couple times, and dart for the Great Hall. Before getting there, though, I realize the {} is pretty empty. & now that I think about it, I didn’t see any other shoes down in the {}. I get into the Great Hall and no one is there. I look at my calendar and {} myself. It’s Labor Day.".format(random_adj(), random_verb(), random_int(), random_verb(), random_verb(), random_verb(), random_int(), random_verb_ing(), other[0], random_verb(), random_noun(), random_noun(), random_verb()))
+    print("Mondays are always {}. I {} my alarm {} times until I am officially late. I {} out of bed, {} on clothes, {} my teeth, and was out of the dorm building in {} minutes. {} down the hills of San Francisco, I found myself completely out of breath. I run inside Make School and take off my {}, exposing mismatched socks. I curse the Gods for a second and focus my attention on getting to my Huddle before it ends. I {} up the steps, not forgetting to trip a couple times, and dart for the Great Hall. Before getting there, though, I realize the {} is pretty empty. & now that I think about it, I didn’t see any other shoes down in the {}. I get into the Great Hall and no one is there. I look at my calendar and {} myself. It’s Labor Day.".format(random_adj(), random_verb(), random_int(), random_verb(), random_verb(), random_verb(), random_int(), random_verb_ing(), article_of_clothing, random_verb(), random_noun(), random_noun(), random_verb()))
 
 #
 # GET INPUT AND STORE IN EACH LIST
@@ -93,8 +93,7 @@ for i in range(1, 3):
     verb = user_input("Input a verb ending with 'ing': ")
     verb_ing.append(verb)
 
-clothing = user_input("Input article of clothing: ")
-other.append(clothing)
+article_of_clothing = user_input("Input article of clothing: ")
 
 #test()
 print_story()
