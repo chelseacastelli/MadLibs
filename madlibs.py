@@ -12,9 +12,24 @@ integers = list()
 other = list()
 
 def random_adj():
-    random.choice(adjectives)
+    item = random.choice(adjectives)
+    adjectives.remove(item)
+    return item
 
-def random
+def random_noun():
+    item = random.choice(nouns)
+    nouns.remove(item)
+    return item
+
+def random_verb():
+    item = random.choice(verbs)
+    verbs.remove(item)
+    return item
+
+def random_int():
+    item = random.choice(integers)
+    integers.remove(item)
+    return item
 
 def user_input(prompt):
     user_input = input(prompt)
@@ -34,6 +49,11 @@ def test():
     list_all_items(verbs)
     list_all_items(integers)
     list_all_items(other)
+    print('\n')
+    print(random_adj())
+
+    list_all_items(adjectives)
+
 
 def print_story():
     print("Mondays are always {}. I {} my alarm (integer) times until I was officially late. I (adjective) out of bed, (adjective) on clothes, (adjective) my teeth, and was out of the dorm building in (integer) minutes. (Verb(ing)) down the hills of San Francisco, I found myself completely out of breath. I run inside Make School and take off my (article of clothing), exposing mismatched socks. I curse the Gods for a second and focus my attention back to getting to my Huddle before it ends. I (verb) up the steps, not forgetting to trip a couple times, and dart for the Great Hall. Before getting there, though, I realize the (noun) is pretty empty. & now that I think about it, I didn’t see any other shoes down in the (noun). I get into the Great Hall and no one is there. I look at my calendar and (verb) myself. It’s Labor Day.".format(random_adj(adjectives), random_verb(verb)))
